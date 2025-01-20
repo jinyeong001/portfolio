@@ -2,20 +2,20 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentImageIndex = 0;
     const imageCollections = {
         shell: [
-            '../jinyeong001/images/shell/1.png',
-            '../jinyeong001/images/shell/2.png',
-            '../jinyeong001/images/shell/3.png',
-            '../jinyeong001/images/shell/4.png',
-            '../jinyeong001/images/shell/5.png'
+            'images/shell/1.png',
+            'images/shell/2.png',
+            'images/shell/3.png',
+            'images/shell/4.png',
+            'images/shell/5.png'
         ],
         flame: [
-            '../jinyeong001/images/flame/1.png',
-            '../jinyeong001/images/flame/2.png',
-            '../jinyeong001/images/flame/3.png',
-            '../jinyeong001/images/flame/4.png',
-            '../jinyeong001/images/flame/5.png',
-            '../jinyeong001/images/flame/6.png',
-            '../jinyeong001/images/flame/7.png'
+            'images/flame/1.png',
+            'images/flame/2.png',
+            'images/flame/3.png',
+            'images/flame/4.png',
+            'images/flame/5.png',
+            'images/flame/6.png',
+            'images/flame/7.png'
         ]
     };
     
