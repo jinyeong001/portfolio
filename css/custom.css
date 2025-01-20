@@ -1,0 +1,537 @@
+#labs-section.page {
+    padding: 7em 0;
+}
+
+#labs-section .heading {
+    font-size: 44px !important;
+    font-weight: 700 !important;
+    color: #4169e1 !important;
+    margin-bottom: 40px !important;
+    text-transform: none !important;
+}
+
+#labs-section .filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+#labs-section .filter-buttons .btn.filter-btn {
+    border: none !important;
+    margin: 5px !important;
+    padding: 8px 16px !important;
+    background: transparent !important;
+    color: #333 !important;
+    border-radius: 0 !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    box-shadow: none !important;
+    position: relative !important;
+    transition: color 0.3s ease !important;
+}
+
+#labs-section .filter-buttons .btn.filter-btn::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: -2px !important;
+    left: 50% !important;
+    width: 0 !important;
+    height: 2px !important;
+    background-color: #4169e1 !important;
+    transition: all 0.3s ease !important;
+    transform: translateX(-50%) !important;
+}
+
+#labs-section .filter-buttons .btn.filter-btn:hover::after {
+    width: 100% !important;
+}
+
+#labs-section .filter-buttons .btn.filter-btn.active {
+    color: #4169e1 !important;
+}
+
+#labs-section .filter-buttons .btn.filter-btn.active::after {
+    width: 100% !important;
+}
+
+.labs-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    width: 100%;
+}
+
+.lab-item {
+    position: relative;
+    aspect-ratio: 1;
+    margin: 0;
+    overflow: hidden;
+}
+
+.lab-item-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.lab-item-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.lab-item h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.heading-section h2.heading,
+.heading-section .heading {
+    font-size: 44px !important;
+    font-weight: 700 !important;
+    color: #4169e1 !important;
+    margin-bottom: 5px !important;
+    text-transform: none !important;
+}
+
+.progress-circle {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 15px !important;
+}
+
+.progress-circle .col-lg-4 {
+    width: 33.33% !important;
+    padding: 0 15px !important;
+}
+
+.progress-circle .bg-white {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* 섹션 간격 조절 */
+.ftco-section {
+    padding: 4em 0 !important; /* 기존 7em에서 4em으로 줄임 */
+}
+
+/* About 섹션은 예외적으로 처리 (hero 섹션과 연결되어 있어서) */
+#about-section.ftco-section {
+    padding-top: 0em !important;
+}
+
+/* 섹션 내부 제목과 콘텐츠 사이 간격 조절 */
+.row.justify-content-center.pb-5 {
+    padding-bottom: 2rem !important; /* 기존 3rem에서 2rem으로 줄임 */
+}
+
+/* 버튼 호버 효과 */
+.btn-primary, .box {
+    transition: transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-5px);
+}
+
+/* Contact 박스 호버 효과 */
+.box.text-center {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box.text-center:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* 프로젝트 카드 스타일 */
+.project-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    position: relative;
+    aspect-ratio: 1;
+    width: 100%;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.project-card .card-body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project-card small {
+    color: #666;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-overlay span {
+    color: white;
+    font-size: 1.1rem;
+}
+
+/* 반응형 조정 */
+@media (max-width: 768px) {
+    .project-card {
+        height: 180px;
+    }
+}
+
+/* 부트스트랩 기본 스타일 덮어쓰기 */
+.card-body {
+    flex: none !important;
+}
+
+.col-md-4 {
+    margin-bottom: 30px;
+}
+
+/* 모달 스타일 */
+.modal-content {
+    border-radius: 15px;
+}
+
+.modal-header {
+    border-bottom: none;
+    padding: 20px 30px;
+}
+
+.modal-body {
+    padding: 30px;
+}
+
+.modal-body .date {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.modal-dialog {
+    display: flex;
+    align-items: center;
+    min-height: calc(100% - 1rem);
+}
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        min-height: calc(100% - 3.5rem);
+    }
+}
+
+.modal-body .pl-3 p {
+    margin-bottom: 0.5rem; 
+}
+
+.number {
+    color: #3e64ff;
+    font-weight: bold;
+    font-size: 25px;
+    margin-right: 2px;
+}
+
+/* 프로젝트 배경 이미지 */
+.ignite-bg {
+    background: url('../images/ignite.png') center 40%/70% no-repeat !important;
+}
+
+.flame-bg {
+    background: url('../images/flame/flame.png') center 35%/65% no-repeat !important;
+}
+
+.nova-bg {
+    background: url('../images/nova.png') center 45%/55% no-repeat !important;
+}
+
+.supsernova-bg {
+    background: url('../images/supernova.png') center 5%/95% no-repeat !important;
+}
+
+.shell-bg {
+    background: url('../images/shell/shell.png') center 40%/55% no-repeat !important;
+}
+
+.project-card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end !important;
+    padding-bottom: 15px !important;
+}
+
+.project-card h3 {
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+
+.project-card.koreait-bg h3 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Lab 아이템 이미지 스타일 */
+.lab-item-content.apache {
+    background: url('../images/apache.png') center/contain no-repeat;
+}
+
+.lab-item-content.esxi {
+    background: url('../images/esxi.png') center/contain no-repeat;
+}
+
+.lab-item-content.kubernetes {
+    background: url('../images/kubernetes.png') center/contain no-repeat;
+}
+
+.lab-item-content.loganalyzer {
+    background: url('../images/loganalyzer.png') center/contain no-repeat;
+}
+
+.lab-item-content.malware {
+    background: url('../images/malware.JPG') center/contain no-repeat;
+}
+
+.lab-item-content.ossec {
+    background: url('../images/ossec.png') center/contain no-repeat;
+}
+
+.lab-item-content.pmm {
+    background: url('../images/pmm.png') center/contain no-repeat;
+}
+
+.lab-item-content.snort {
+    background: url('../images/snort.JPG') center/contain no-repeat;
+}
+
+.lab-item-content.suricata {
+    background: url('../images/suricata.png') center/contain no-repeat;
+}
+
+.lab-item-content.waf {
+    background: url('../images/waf.JPG') center/contain no-repeat;
+}
+
+.lab-item-content.wazuh {
+    background: url('../images/wazuh.png') center/contain no-repeat;
+}
+
+.lab-item-content.wireshark {
+    background: url('../images/wireshark.png') center/contain no-repeat;
+}
+
+.lab-item-content.wordpress {
+    background: url('../images/wordpress.png') center/contain no-repeat;
+}
+
+.lab-item-content.zabbix {
+    background: url('../images/zabbix.png') center/contain no-repeat;
+}
+
+.lab-item-content.ctf {
+    background: url('../images/ctf.JPG') center/contain no-repeat;
+}
+
+.lab-item-content.docker {
+    background: url('../images/docker.png') center/contain no-repeat;
+}
+
+.lab-item-content.jenkins {
+    background: url('../images/jenkins.png') center/contain no-repeat;
+}
+
+.lab-item-content.kali {
+    background: url('../images/kali.png') center/contain no-repeat;
+}
+
+.lab-item-content.mysql {
+    background: url('../images/mysql.png') center/contain no-repeat;
+}
+
+/* 이미지 스타일 */
+.lab-item-content.apache,
+.lab-item-content.esxi,
+.lab-item-content.kubernetes,
+.lab-item-content.loganalyzer,
+.lab-item-content.malware,
+.lab-item-content.ossec,
+.lab-item-content.pmm,
+.lab-item-content.snort,
+.lab-item-content.suricata,
+.lab-item-content.waf,
+.lab-item-content.wazuh,
+.lab-item-content.wireshark,
+.lab-item-content.wordpress,
+.lab-item-content.zabbix,
+.lab-item-content.ctf,
+.lab-item-content.docker,
+.lab-item-content.jenkins,
+.lab-item-content.kali,
+.lab-item-content.mysql {
+    background-size: 95% !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+/* 호버 오버레이 */
+.lab-item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.lab-item:hover .lab-item-overlay {
+    opacity: 1;
+}
+
+.lab-item-overlay span {
+    color: white;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+/* Lab 정보 스타일 */
+.lab-item-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.lab-item:hover .lab-item-info {
+    opacity: 1;
+}
+
+.lab-item-info h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.lab-item-info .category {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 5px;
+}
+
+.lab-item-info .category-tag {
+    display: inline-block;
+    padding: 2px 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    margin: 2px;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.lab-item-info .category-tag::before {
+    content: '#';
+    margin-right: 2px;
+}
+
+/* Lab 아이템 호버 효과 */
+.lab-item:hover .lab-item-content {
+    transform: scale(1.05);
+}
+
+/* 공통 오버레이 버튼 스타일 */
+.project-overlay span,
+.lab-item-overlay span {
+    color: white;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+/* Projects 오버레이 스타일 수정 */
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+}
+
+/* Education 섹션 스타일 */
+#education-section .resume-wrap {
+    max-width: 850px;
+    margin: 0 auto;   
+    width: 100%;    
+}
+
+#education-section .text {
+    max-width: 1000px;
+}
+
+#education-section p {
+    max-width: 900px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
